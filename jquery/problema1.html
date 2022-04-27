@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Problema1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+   
+    <!-- $("#id") - functia selector care ia ca param un selector css si returneaza un obiect wrapper javascript -->
+
+    <script>
+      $(document).ready(function(){  //codul din aceasta functie se executa numai dupa incarcarea completa a documentului
+        $("#artists1").dblclick(function(){
+
+          var obj = document.createElement("option");
+          obj.text = document.getElementById('artists1').options[document.getElementById('artists1').selectedIndex].text;
+          $("#artists2").append(obj);
+          $("#artists1 option:selected").remove();
+
+        });
+
+        $("#artists2").dblclick(function(){
+
+          var obj = document.createElement("option");
+          obj.text = document.getElementById('artists2').options[document.getElementById('artists2').selectedIndex].text;
+          $("#artists1").append(obj);
+          $("#artists2 option:selected").remove();
+
+        });
+      });
+    </script>
+
+    <select multiple=true id="artists1" size="10">
+      <option value="default" selected disabled hidden>None</option>
+      <option value="First1">Dua Lipa</option>
+      <option value="First2">The Weeknd</option>
+      <option value="First3">Ian</option>
+      <option value="First4">Azteca</option>
+      <option value="First5">One Republic</option>
+    </select id="secondSelect">
+
+    <select multiple=true id="artists2" size="10">
+      <option value="default" selected disabled hidden>None</option>
+      <option value="Second1">Delia</option>
+      <option value="Second2">Beyonce</option>
+      <option value="Second3">Adele</option>
+      <option value="Second4">Mia</option>
+      <option value="Second5">Jador</option>
+     
+    </select>
+
+  </body>
+</html>

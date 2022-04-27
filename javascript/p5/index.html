@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+
+        table {
+            border: 1px solid black;
+        }
+
+        td {
+            padding: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<table id="gameBoard">
+</table>
+
+<script>
+    let curX = 0;
+    let curY = 0;
+    let table = document.getElementById("gameBoard");
+    let elems = 4;
+    let used = Array(elems * elems);
+
+    let items = Array.from(Array(elems), () => new Array(elems));
+    used.fill(0);
+
+    function getField() {
+        let randomValue = Math.floor(Math.random() * used.length);
+        while (used[randomValue] === 1) {
+            randomValue = Math.floor(Math.random() * used.length);
+        }
+        used[randomValue]++;
+        return randomValue;
+    }
+
+    for (let i = 0; i < elems; i++) {
+        const row = table.insertRow();
+        for (let j = 0; j < elems; j++) {
+            const cell = row.insertCell();
+            let value = getField();
+            cell.innerHTML = '' + value;
+            if (value === 0) {
+                curX = i;
+                curY = j;
+                cell.innerHTML = ''
+            }
+            items[i][j] = cell;
+            cell.style.fontSize = "16px";
+        }
+    }
+
+    table.parentElement.addEventListener('keydown', function (event) {
+        let tmp;
+        switch (event.key) {
+            case "ArrowLeft":
+                tmp = items[curX][curY - 1].innerHTML;
+                items[curX][curY - 1].innerHTML = items[curX][curY].innerHTML;
+                items[curX][curY].innerHTML = tmp;
+                curY--;
+                break;
+            case "ArrowRight":
+                tmp = items[curX][curY + 1].innerHTML;
+                items[curX][curY + 1].innerHTML = items[curX][curY].innerHTML;
+                items[curX][curY].innerHTML = tmp;
+                curY++;
+                break;
+            case "ArrowUp":
+                tmp = items[curX - 1][curY].innerHTML;
+                items[curX - 1][curY].innerHTML = items[curX][curY].innerHTML;
+                items[curX][curY].innerHTML = tmp;
+                curX--;
+                break;
+            case "ArrowDown":
+                tmp = items[curX + 1][curY].innerHTML;
+                items[curX + 1][curY].innerHTML = items[curX][curY].innerHTML;
+                items[curX][curY].innerHTML = tmp;
+                curX++;
+                break;
+        }
+    });
+
+</script>
+
+
+</body>
+</html>

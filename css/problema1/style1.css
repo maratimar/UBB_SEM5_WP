@@ -1,0 +1,28 @@
+#parinte{
+    display: flex;
+    border: 2px solid black;
+    width: 420px;
+    padding: 20px;   /*spatiu in jurul unui element delimitat de o bordura*/
+    margin: auto; /* browserul calculeaza marginea*/
+}
+
+#stanga {
+    
+    width: 200px;
+    text-align: center;
+    margin: auto;
+}
+
+#dreapta img{
+    
+     max-width: 200px;
+   
+}
+
+#dreapta{
+    
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    
+}

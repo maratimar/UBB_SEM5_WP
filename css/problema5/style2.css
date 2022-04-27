@@ -1,0 +1,28 @@
+.content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 40vh;
+    border: 1px solid black;
+}
+
+.cell {
+    display: block;
+    width: calc(50% - 40px);
+    background: yellow;
+    padding: 10px;
+    height: 20vh;
+    width: 100%;
+}
+
+.label {
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 25%;
+}
+
+img {
+    width: 50%;
+    height: 100%;
+}

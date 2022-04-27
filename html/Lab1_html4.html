@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+   
+    <head>
+       <title>TEST DRIVE-FEEDBACK FORM</title>
+    </head>
+    
+    <body>
+       <form id="form-div" action="POST" target="_blank">
+          <table id="form table" border="2" bgcolor="LightSteelBlue">
+            <thead>
+              <tr>
+               <th colspan="2">TEST DRIVE-FEEDBACK FORM</th>
+              </tr>
+            </thead>
+            
+            <tbody>
+               <tr>
+                 <td style="vertical-align:initial;">
+                 <table id="form-table-user">
+                   <thead>
+                       <tr>
+                         <th colspan="4"><b>User details</b></th>
+                       </tr>
+                   </thead>
+                   
+                   <tbody>
+                     <tr>
+                       <td><b>First name</b></td>
+                       <td><input id="fname" type="text" name="fname" maxlength="20"></td>
+                       <td><b>Last name</b></td>
+                       <td><input id="lname" type="text" name="lname" maxlength="20"></td>
+                     </tr>
+                     
+                     <tr>
+                        <td><b>E-mail</b></td>
+                        <td><input id="email" type="text" name="email" maxlength="50"></td>
+                        <td><b>Gender</b></td>
+                        <td><input type="radio" name="gender" value="m">Male
+                        <input type="radio" name="gender" value="f">Female</td>
+                     </tr>
+
+                     <tr>
+                         <td rowspan="3"><b>Adress</b></td>
+                         <td><b>City</b></td>
+                         <td><select id="city">
+                         <option value="cj" selected="selected">Cluj-Napoca</option>
+                         <option value="buc">Bucure&#351;ti</option>    
+                         <option value="bv">Bra&#351;ov</option>
+                         <option value="sv">Suceava</option>
+                         <option value="is">Ia&#351;i</option>
+                         </select></td>
+                    </tr>
+                    
+                    <tr>
+                      <td><b>PersonalAdress</b></td>
+                      <td><input type="text" maxlength="40" name="adr1"></td>
+                    </tr>
+                                             
+                    <tr>               
+                      <td><b>WorkAdress</b></td>
+                      <td><input type="text" maxlength="40" name="adr2"></td>
+                    </tr>
+                    
+                   </tbody>
+                  </table>
+                 </td>
+                 
+                 <td>
+                   <table id="form-table-results">
+                      <thead>
+                        <tr>
+                          <th colspan="4"><b>Test results</b></th>
+                        </tr>
+                      </thead>
+                      
+                      <tbody>
+                         <tr>
+                           <td><b>Car</b></td>
+                           <td>
+                            <select id="cars">
+                            <option value="ty" selected="selected">Toyota</option>
+                            <option value="bmw">BMW</option>
+                            <option value="vw">VolksWagen</option>
+                            <option value="hy">Hyundai</option>
+                            <option value="p">Porsche</option>
+                            </select>
+                           </td>
+                           
+                           <td><b>Time (in hours)</b></td>
+                           <td><input type="text" id="duration" name="duration" value="1" maxlength="2"></td>
+                         </tr>
+                   
+                        <tr>
+                         <td><b>Comfort level</b></td>
+                         <td colspan="3">
+                         <input type="radio" name="comfort" value="1">1
+                         <input type="radio" name="comfort" value="2">2
+                         <input type="radio" name="comfort" value="3">3
+                         <input type="radio" name="comfort" value="4">4
+                         <input type="radio" name="comfort" value="5" checked="checked">5
+                         <input type="radio" name="comfort" value="6">6
+                         <input type="radio" name="comfort" value="7">7
+                         <input type="radio" name="comfort" value="8">8
+                         <input type="radio" name="comfort" value="9">9
+                          </td>
+                        </tr>     
+
+                        <tr>
+                         <td><b>Driving experience</b></td>
+                         <td colspan="3">
+                         <input type="radio" name="dexp" value="1">1
+                         <input type="radio" name="dexp" value="2">2
+                         <input type="radio" name="dexp" value="3">3
+                         <input type="radio" name="dexp" value="4">4
+                         <input type="radio" name="dexp" value="5" checked="checked">5
+                         <input type="radio" name="dexp" value="6">6
+                         <input type="radio" name="dexp" value="7">7
+                         <input type="radio" name="dexp" value="8">8
+                         <input type="radio" name="dexp" value="9">9
+                         </td>
+                        </tr> 
+
+                        <tr>
+                        <td><b>Select favourite features</b></td>
+                        <td colspan="3">
+                        <table>
+                          <tr>
+                            <td><input type="checkbox" name="features" value="br">Breaks</td>
+                                <td><input type="checkbox" name="features" value="mq">Materials quality</td>
+                                <td><input type="checkbox" name="features" value="sp">Space</td>
+                                <td><input type="checkbox" name="features" value="mm">Multimedia</td>
+                                <td><input type="checkbox" name="features" value="cc">Colour</td>
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" name="features" value="rl">
+                                Reliability</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                   </td>
+                  </tr>   
+
+                  <tr>
+                    <td colspan="2">
+                    <table id="form-table-questions" width="100%">
+                    <thead>
+                       <tr>
+                        <th><b>Questions and answers</b></th>
+                       </tr>
+                    </thead>
+                    
+                    <tbody>
+                      <tr>
+                        <td>
+                          <ol type="1" start="1">
+                          <li><strong>Would you buy this car or recommend it to someone else?</strong><br>
+                          <input type="radio" name="buy" value="y">Yes
+                          <input type="radio" name="buy" value="n">No
+                          </li>   
+                          <li><strong>How was this car compared to other models from the same producer?</strong><br>
+                          <input type="text" maxlength="100" size="150">             
+                          </li>
+                          <li><strong>What feature would make the car perfect?</strong><br>
+                          <input type="text" maxlength="50" size="150">
+                          </li>
+                          </ol>
+                        </td>
+                       </tr>
+                    </tbody>
+                  </table>
+                 </td>
+               </tr>
+                    
+               <tr>
+                     <td colspan="2">
+                       <table id="form-table-obs">
+                         <thead>
+                             <tr>
+                                <th colspan="3"><strong>Observations</strong></th>
+                             </tr>
+                         </thead>
+                         
+                         <tbody>
+                           <tr>
+                             <td><strong>Pros</strong></td>
+                             <td><strong>Cons</strong></td>
+                             <td><strong>Other</strong></td>
+                           </tr>
+                           
+                           <tr>
+                              <td><textarea cols="40" rows="10"></textarea></td>
+                              <td><textarea cols="40" rows="10"></textarea></td>
+                              <td><textarea cols="40" rows="10"></textarea></td>
+                           </tr>
+                           
+                        </tbody>
+                       </table>
+                      </td>
+                    </tr> 
+
+                    <tr>
+                        <td colspan="2">
+                            <center><input type="submit"></center>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <br><br>
+        <center>
+        <strong>More details here:</strong><br>
+        <a href="https://www.prometric.com/test-drive"><img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=752&q=80" alt="carsfortests"></a>
+        
+    </body>
+</html>        
+                 
+                 
+                         
+                       
+            
+            
+              

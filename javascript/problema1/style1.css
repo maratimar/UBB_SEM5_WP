@@ -1,0 +1,19 @@
+.row {
+    
+    display:flex;
+    
+}
+
+select {
+    
+    width: 150px;
+    font-size:18px;
+}
+
+.spacer {
+    
+    width: 50px;
+    
+}
+    
+    

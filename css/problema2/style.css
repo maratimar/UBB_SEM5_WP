@@ -1,0 +1,50 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    background-color: red;
+}
+
+#menu {
+    width: 100%;
+    min-height: 25px;
+    line-height:25px;
+    background-color: yellow;
+    overflow-x: auto;  /* adauga scrollbar numai atunci cand e necesar + se poate folosi numai la elemente cu      inaltimea specificata*/
+}
+
+    #menu ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: block;
+    }
+
+        #menu ul li {
+            width: 250px; 
+            display: inline-block; /*nu adauga sfarsit de linie dupa element, deci elementele pot fi pozitionate unul dupa altul*/
+            border-right: 1px solid black;
+        }
+
+#body {
+    
+    height: calc(100% - 185px);  /*main-view-ul va avea inaltimea : din inaltimea totala scadem inaltimea celorlalte elemente */
+    background-color: green;
+	overflow-x: auto;
+}
+
+#footer {
+    width: 100%;
+    height: 60px;
+    background-color: pink;
+}
+
+    
+    
+    
+    
+

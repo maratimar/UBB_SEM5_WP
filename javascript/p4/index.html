@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+
+        table {
+            border: 1px solid black;
+        }
+
+        th {
+            border: 3px solid black;
+            cursor: pointer;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<table>
+    <tr>
+        <th>Fructe</th>
+        <th>Pret</th>
+        <th>Cantitate</th>
+    </tr>
+    <tr>
+        <td>Mere</td>
+        <td>15</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>Pere</td>
+        <td>5</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Pere</td>
+        <td>90</td>
+        <td>2</td>
+    </tr>
+    
+
+</table>
+
+<br><br>
+<table>
+    <tr>
+        <th>Fructe</th>
+        <th>Mere</th>
+        <th>Pere</th>
+    </tr>
+    <tr>
+        <td>Cantitate</td>
+        <td>25</td>
+        <td>18</td>
+    </tr>
+    <tr>
+        <td>Pret</td>
+        <td>18</td>
+        <td>20</td>
+    </tr>
+
+</table>
+
+<script>
+    const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+
+    const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+            v1 !== '' && v2 !== '' &&
+            !isNaN(v1) && !isNaN(v2) ?
+                v1 - v2 : v1.toString().localeCompare(v2))
+    (getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+    // do the work...
+    document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
+        const table = th.closest('table');
+        Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
+            .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
+            .forEach(tr => table.appendChild(tr));
+    })));
+</script>
+
+
+</body>
+</html>

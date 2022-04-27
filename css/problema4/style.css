@@ -1,0 +1,99 @@
+body {
+    margin-top: 250px;
+    text-align: center;
+}
+
+img {
+    width: 84px;
+    height: 84px;
+    cursor: pointer;
+    /* display: block; */
+}
+
+#facebook:hover {
+    background: url('css-pr4.png') 0 0;
+}
+
+#facebook {
+    background: url('css-pr4.png') 0 -84px;
+}
+
+#nuStiu1:hover {
+    background: url('css-pr4.png') -84px 0;
+}
+
+#nuStiu1 {
+    background: url('css-pr4.png') -84px -84px;
+}
+
+#nuStiu2:hover {
+    background: url('css-pr4.png') -168px 0;
+}
+
+#nuStiu2 {
+    background: url('css-pr4.png') -168px -84px;
+}
+
+#googlePlus:hover {
+    background: url('css-pr4.png') -252px 0;
+}
+
+#googlePlus {
+    background: url('css-pr4.png') -252px -84px;
+}
+
+#linkedIn:hover {
+    background: url('css-pr4.png') -336px 0;
+}
+
+#linkedIn {
+    background: url('css-pr4.png') -336px -84px;
+}
+
+#pinterest:hover {
+    background: url('css-pr4.png') -420px 0;
+}
+
+#pinterest {
+    background: url('css-pr4.png') -420px -84px;
+}
+
+#nuStiu3:hover {
+    background: url('css-pr4.png') -504px 0;
+}
+
+#nuStiu3 {
+    background: url('css-pr4.png') -504px -84px;
+}
+
+#skype:hover {
+    background: url('css-pr4.png') -588px 0;
+}
+
+#skype {
+    background: url('css-pr4.png') -588px -84px;
+}
+
+#twitter:hover {
+    background: url('css-pr4.png') -672px 0;
+}
+
+#twitter {
+    background: url('css-pr4.png') -672px -84px;
+}
+
+#nuStiu4:hover {
+    background: url('css-pr4.png') -756px 0;
+}
+
+#nuStiu4 {
+    background: url('css-pr4.png') -756px -84px;
+}
+
+#youtube:hover {
+    background: url('css-pr4.png') -840px 0;
+}
+
+#youtube {
+    background: url('css-pr4.png') -840px -84px;
+}

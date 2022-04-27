@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+
+        table {
+            border: 1px solid black;
+        }
+
+        th {
+            border: 3px solid black;
+            cursor: pointer;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<table id="sortable">
+    <tr>
+        <th onclick="sortBy(0)">Fructe</th>
+        <td>Meeere</td>
+        <td>Pere</td>
+    </tr>
+    <tr>
+        <th onclick="sortBy(1)">Pret</th>
+        <td>5</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <th onclick="sortBy(2)">Cantitate</th>
+        <td>8</td>
+        <td>2</td>
+    </tr>
+
+</table>
+
+
+<script>
+    cPrev = -1; // global var saves the previous c, used to
+                // determine if the same column is clicked again
+
+    function sortBy(c) {
+        rows = document.getElementById("sortable").rows.length;
+        columns = document.getElementById("sortable").rows[0].cells.length - 1;
+        arrTable = [...Array(rows)].map(e => Array(columns));
+
+        for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+                // assign the value in each row-column to a 2d array by row-column
+                arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co + 1].innerHTML;
+            }
+        }
+
+
+        console.log(c + '' + cPrev);
+
+        if (c !== cPrev) {
+            const sort2dArrayColums = (array, index) => {
+                if (!Array.isArray(array))
+                    return [];
+                const sortedFirstRow = arrTable[index]
+                    .map((item, i) => ({v: item, i: i}))
+                    .sort((a, b) => {
+                        return a.v < b.v ? -1 : 1;
+                    });
+                return array.map((row) => row.map((_, i) => row[sortedFirstRow[i].i]));
+            };
+
+            arrTable = sort2dArrayColums(arrTable, c);
+            cPrev = c;
+        } else {
+            const sort2dArrayReverse = (array, index) => {
+                if (!Array.isArray(array))
+                    return [];
+                const sortedFirstRow = arrTable[index]
+                    .map((item, i) => ({v: item, i: i}))
+                    .sort((a, b) => {
+                        return a.v > b.v ? -1 : 1;
+                    });
+                return array.map((row) => row.map((_, i) => row[sortedFirstRow[i].i]));
+            };
+
+            arrTable = sort2dArrayReverse(arrTable, c);
+            cPrev = -1;
+        }
+
+        // cycle through rows-columns placing values from the array back into the html table
+        for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+                console.log(ro + ',' + co + "<=>" + ro + ',' + (co + 1) + '=' + arrTable[ro][co])
+                document.getElementById("sortable").rows[ro].cells[co + 1].innerHTML = arrTable[ro][co];
+            }
+        }
+
+    }
+
+</script>
+
+
+</body>
+</html>
